@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REFORM PERTH — Renovation, Design & Materials</title>
+<meta name="description" content="REFORM PERTH delivers kitchen, bathroom and house renovations, commercial fit-outs, interior design and premium materials across Perth, Western Australia.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10131a; --ink2:#1a1f29; --paper:#f6f4ef; --paper2:#ffffff;
+    --accent:#e07b39; --accent-d:#c8662a; --line:rgba(255,255,255,.14);
+    --line-d:rgba(16,19,26,.12); --muted:#9aa3b2; --text:#1c212b;
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Manrope",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(16,19,26,.92);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em;font-size:18px}
+  .brand .mark{width:38px;height:38px;flex:none}
+  .nav-links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600}
+  .nav-links a{opacity:.85;transition:opacity .2s}
+  .nav-links a:hover{opacity:1}
+  .nav-tel{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:999px;transition:background .2s}
+  .nav-tel:hover{background:var(--accent-d)}
+  .burger{display:none;background:none;border:0;cursor:pointer}
+  @media(max-width:860px){
+    .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ink);flex-direction:column;padding:20px 24px 28px;gap:18px;align-items:flex-start;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .burger{display:block}
+    .nav-tel{padding:9px 14px;font-size:13.5px}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{background:radial-gradient(1100px 600px at 78% -10%,#2a3140 0%,transparent 60%),linear-gradient(180deg,var(--ink) 0%,var(--ink2) 100%);color:#fff;padding:110px 0 96px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05'%3E%3Cpath d='M28 0v56M0 28h56'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--accent)}
+  .hero h1{font-size:clamp(42px,6vw,72px);line-height:1.05;font-weight:800;letter-spacing:-.02em;max-width:15ch}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p.sub{max-width:56ch;font-size:clamp(16px,2vw,19px);color:#c9ced8;margin:26px 0 38px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px;padding:15px 28px;border-radius:999px;transition:transform .15s,background .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-d)}
+  .btn-ghost{border:1.5px solid var(--line);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.07)}
+  .hero-strip{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line);font-size:14px;font-weight:600;color:#aeb6c3}
+  .hero-strip span{display:inline-flex;align-items:center;gap:9px}
+  .hero-strip svg{color:var(--accent)}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0}
+  .sec-head{margin-bottom:52px;max-width:640px}
+  .sec-kicker{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .sec-head h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:800;letter-spacing:-.015em}
+  .sec-head p{color:#5b6472;margin-top:14px;font-size:16.5px}
+  .sec-center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* services */
+  .services{background:var(--paper2)}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+  .svc-card{background:var(--paper);border:1px solid var(--line-d);border-radius:var(--radius);padding:36px 34px;transition:transform .2s,box-shadow .2s}
+  .svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(16,19,26,.35)}
+  .svc-num{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+  .svc-card h3{font-size:24px;font-weight:800;margin:12px 0 6px;letter-spacing:-.01em}
+  .svc-card p.desc{color:#5b6472;font-size:15px;margin-bottom:20px}
+  .svc-list{list-style:none;display:grid;gap:11px}
+  .svc-list li{display:flex;align-items:baseline;gap:10px;font-size:15.5px;font-weight:600}
+  .svc-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;transform:translateY(-2px)}
+
+  /* process */
+  .process{background:var(--ink);color:#fff}
+  .process .sec-head p{color:#aeb6c3}
+  .step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .step{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:rgba(255,255,255,.03)}
+  .step .n{font-size:15px;font-weight:800;color:var(--accent);letter-spacing:.1em}
+  .step h3{font-size:19px;font-weight:700;margin:12px 0 8px}
+  .step p{font-size:14.5px;color:#aeb6c3}
+
+  /* why strip */
+  .why{background:var(--paper)}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .why-item{border:1px solid var(--line-d);border-radius:var(--radius);padding:28px;background:#fff}
+  .why-item h3{font-size:18px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .why-item p{font-size:14.5px;color:#5b6472}
+
+  /* contact */
+  .contact{background:linear-gradient(180deg,var(--ink2),var(--ink));color:#fff}
+  .contact-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;border:1px solid var(--line);border-radius:24px;padding:44px 44px;background:rgba(255,255,255,.03)}
+  .contact h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-.015em;max-width:20ch}
+  .contact p.sub{color:#aeb6c3;margin-top:12px;max-width:46ch}
+  .contact-ways{display:flex;flex-direction:column;gap:16px;min-width:260px}
+  .cway{display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700}
+  .cway svg{color:var(--accent);flex:none}
+  .cway small{display:block;font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+
+  footer{background:var(--ink);color:#8b93a2;border-top:1px solid var(--line);padding:34px 0}
+  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:14px}
+  .foot .brand{color:#fff;font-size:15px}
+
+  @media(max-width:640px){
+    section{padding:72px 0}
+    .hero{padding:80px 0 72px}
+    .contact-card{padding:32px 26px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="10" fill="#E07B39"/>
+        <path d="M10 29V11h4.6l5.4 9.4L25.4 11H30v18h-4.6v-9.2l-5.4 9.4-5.4-9.4V29H10z" fill="#fff"/>
+      </svg>
+      REFORM PERTH
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-tel" href="tel:+61860104211">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      08 6010 4211
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Perth · Renovation, Design &amp; Materials</span>
+    <h1>Reform your space.<br><em>We handle the rest.</em></h1>
+    <p class="sub">From kitchen, bathroom and full-house renovations to commercial fit-outs — supported by in-house interior design, drafting and premium materials. One team, one standard, from first sketch to final handover.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+61860104211">Get a free quote</a>
+      <a class="btn btn-ghost" href="#services">Explore services</a>
+    </div>
+    <div class="hero-strip">
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Renovations</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Interior Design</span>
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Materials &amp; Supply</span>
+    </div>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">What we do</div>
+      <h2>Three disciplines. One accountable team.</h2>
+      <p>Design it, build it, and supply it — without juggling separate contractors. REFORM PERTH covers the full scope of your project.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card">
+        <div class="svc-num">01 — Renovations</div>
+        <h3>Build &amp; Renovate</h3>
+        <p class="desc">Transforming tired spaces into functional, beautiful ones — residential and commercial.</p>
+        <ul class="svc-list">
+          <li>Kitchen renovation</li>
+          <li>Bathroom renovation</li>
+          <li>House renovation</li>
+          <li>Commercial fit-out</li>
+        </ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-num">02 — Design</div>
+        <h3>Design &amp; Visualise</h3>
+        <p class="desc">See it before we build it — precise plans and realistic 3D renders, approved up front.</p>
+        <ul class="svc-list">
+          <li>Interior Design</li>
+          <li>Drafting</li>
+          <li>Space Planning</li>
+          <li>3D Rendering</li>
+        </ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-num">03 — Materials</div>
+        <h3>Materials &amp; Finishes</h3>
+        <p class="desc">Quality products sourced, supplied and installed — the finishes that make a space.</p>
+        <ul class="svc-list">
+          <li>Cabinets</li>
+          <li>Stone benchtops</li>
+          <li>Flooring</li>
+          <li>Tiles</li>
+          <li>Windows</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head sec-center">
+      <div class="sec-kicker">How we work</div>
+      <h2>A clear path from idea to finished space</h2>
+      <p>No surprises, no guesswork — a structured process that keeps you informed at every stage.</p>
+    </div>
+    <div class="step-grid">
+      <div class="step"><div class="n">01 / Consult</div><h3>We listen</h3><p>We discuss your goals, site and budget, then scope the project honestly.</p></div>
+      <div class="step"><div class="n">02 / Design</div><h3>You approve</h3><p>Plans, space planning and 3D renders let you see the result before work starts.</p></div>
+      <div class="step"><div class="n">03 / Build</div><h3>We deliver</h3><p>Skilled trades, quality materials and clean, on-schedule execution.</p></div>
+      <div class="step"><div class="n">04 / Handover</div><h3>You enjoy</h3><p>Finishing touches, final walkthrough and a space you'll love living in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Why REFORM PERTH</div>
+      <h2>One team from first sketch to final handover</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3>🏠 End-to-end scope</h3><p>Design, renovation and materials under one roof — no coordination headaches.</p></div>
+      <div class="why-item"><h3>📐 Design first</h3><p>3D renders and drafting before demolition, so what you see is what you get.</p></div>
+      <div class="why-item"><h3>🛠 Quality materials</h3><p>Cabinetry, stone benchtops, flooring, tiles and windows supplied to spec.</p></div>
+      <div class="why-item"><h3>🤝 Local &amp; accountable</h3><p>A Perth-based team with a single point of contact for your whole project.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div>
+        <div class="sec-kicker">Get in touch</div>
+        <h2>Planning a renovation or fit-out?</h2>
+        <p class="sub">Call us for a free, no-obligation chat about your project — or email us and we'll get back to you.</p>
+      </div>
+      <div class="contact-ways">
+        <a class="cway" href="tel:+61860104211">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><small>Phone</small>08 6010 4211</span>
+        </a>
+        <a class="cway" href="mailto:info@reformperth.com">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+          <span><small>Email</small>info@reformperth.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand">REFORM PERTH</span>
+    <span>© 2026 REFORM PERTH PTY LTD. All rights reserved.</span>
+    <span>08 6010 4211 · info@reformperth.com</span>
+  </div>
+</footer>
+
+<script>
+  var b = document.getElementById("burger"), n = document.getElementById("navLinks");
+  b.addEventListener("click", function(){ n.classList.toggle("open"); });
+  n.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ n.classList.remove("open"); }); });
+</script>
+</body>
+</html>
