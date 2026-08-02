@@ -48,13 +48,12 @@
 
   /* ---------- hero ---------- */
   .hero{padding:170px 0 90px;position:relative;background:var(--bone);overflow:hidden}
-  .ghost{position:absolute;top:40px;right:-40px;font-family:"Instrument Serif",serif;font-size:clamp(120px,22vw,320px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(27,31,36,.08);user-select:none;pointer-events:none;white-space:nowrap}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;position:relative;z-index:2}
-  .kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--rust);margin-bottom:26px}
+  .kicker{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);margin-bottom:26px}
   .kicker::before{content:"";width:34px;height:1.5px;background:var(--rust)}
-  .hero h1{font-size:clamp(52px,7.2vw,104px);line-height:.98;letter-spacing:-.01em;color:var(--ink)}
+  .hero h1{font-size:clamp(52px,7.2vw,104px);line-height:.98;letter-spacing:-.01em;color:var(--ink);text-shadow:0 1px 0 rgba(243,239,230,.6)}
   .hero h1 em{font-style:italic;color:var(--rust)}
-  .hero p.lede{margin-top:26px;max-width:44ch;font-size:16.5px;color:#4c545e;font-weight:400}
+  .hero p.lede{margin-top:26px;max-width:44ch;font-size:18px;color:#333a44;font-weight:400}
   .hero-links{display:flex;align-items:center;gap:34px;margin-top:38px;flex-wrap:wrap}
   .link-arrow{font-size:14.5px;font-weight:600;letter-spacing:.04em;display:inline-flex;align-items:center;gap:10px;border-bottom:1.5px solid var(--ink);padding-bottom:4px;transition:gap .2s,color .2s,border-color .2s}
   .link-arrow:hover{gap:16px;color:var(--rust);border-color:var(--rust)}
@@ -187,7 +186,6 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="ghost">REFORM</div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
