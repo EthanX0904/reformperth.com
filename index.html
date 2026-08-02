@@ -3,119 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REFORM PERTH — Renovation, Design & Materials</title>
-<meta name="description" content="REFORM PERTH delivers kitchen, bathroom and house renovations, commercial fit-outs, interior design and premium materials across Perth, Western Australia.">
+<title>REFORM PERTH — Renovation Studio · Perth WA</title>
+<meta name="description" content="Kitchen, bathroom and whole-home renovations, commercial fit-outs, interior design and premium materials in Perth, Western Australia.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#10131a; --ink2:#1a1f29; --paper:#f6f4ef; --paper2:#ffffff;
-    --accent:#e07b39; --accent-d:#c8662a; --line:rgba(255,255,255,.14);
-    --line-d:rgba(16,19,26,.12); --muted:#9aa3b2; --text:#1c212b;
-    --radius:18px;
+    --ink:#15181d; --ink-2:#1d2129; --paper:#f7f5f0; --white:#fff;
+    --accent:#d97a3e; --accent-2:#b35f2b; --line:rgba(255,255,255,.16);
+    --line-d:rgba(21,24,29,.12); --muted:#8d95a3; --text:#1c2026;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:"Manrope",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-  img{max-width:100%;display:block}
+  body{font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;width:100%;height:100%;object-fit:cover}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+  h1,h2,h3,.serif{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:-.01em}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
 
   /* ---------- nav ---------- */
-  nav{position:sticky;top:0;z-index:50;background:rgba(16,19,26,.92);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em;font-size:18px}
-  .brand .mark{width:38px;height:38px;flex:none}
-  .nav-links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600}
-  .nav-links a{opacity:.85;transition:opacity .2s}
-  .nav-links a:hover{opacity:1}
-  .nav-tel{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:999px;transition:background .2s}
-  .nav-tel:hover{background:var(--accent-d)}
+  nav{position:sticky;top:0;z-index:60;background:rgba(21,24,29,.88);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:.16em;font-size:13.5px;text-transform:uppercase}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;opacity:.9}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px}
+  .nav-tel svg{color:var(--accent)}
+  .btn-q{background:var(--accent);color:#fff;font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:4px;letter-spacing:.02em;transition:background .2s}
+  .btn-q:hover{background:var(--accent-2)}
   .burger{display:none;background:none;border:0;cursor:pointer}
-  @media(max-width:860px){
-    .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ink);flex-direction:column;padding:20px 24px 28px;gap:18px;align-items:flex-start;border-bottom:1px solid var(--line)}
+  @media(max-width:900px){
+    .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--ink);flex-direction:column;padding:18px 26px 24px;gap:16px;border-bottom:1px solid var(--line)}
     .nav-links.open{display:flex}
     .burger{display:block}
-    .nav-tel{padding:9px 14px;font-size:13.5px}
   }
 
   /* ---------- hero ---------- */
-  .hero{background:radial-gradient(1100px 600px at 78% -10%,#2a3140 0%,transparent 60%),linear-gradient(180deg,var(--ink) 0%,var(--ink2) 100%);color:#fff;padding:110px 0 96px;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05'%3E%3Cpath d='M28 0v56M0 28h56'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-  .hero .wrap{position:relative;z-index:1}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
-  .eyebrow::before{content:"";width:34px;height:2px;background:var(--accent)}
-  .hero h1{font-size:clamp(42px,6vw,72px);line-height:1.05;font-weight:800;letter-spacing:-.02em;max-width:15ch}
-  .hero h1 em{font-style:normal;color:var(--accent)}
-  .hero p.sub{max-width:56ch;font-size:clamp(16px,2vw,19px);color:#c9ced8;margin:26px 0 38px}
-  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px;padding:15px 28px;border-radius:999px;transition:transform .15s,background .2s}
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--ink)}
+  .hero img{position:absolute;inset:0;z-index:0}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(21,24,29,.32) 0%,rgba(21,24,29,.18) 45%,rgba(21,24,29,.86) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding-bottom:74px}
+  .hero .tag{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#e8c9ae;margin-bottom:22px}
+  .hero .tag::before{content:"";width:36px;height:1.5px;background:var(--accent)}
+  .hero h1{font-size:clamp(44px,7vw,92px);line-height:1.02;max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+  .hero h1 em{font-style:italic;color:#e8c9ae}
+  .hero p{max-width:52ch;margin-top:22px;font-size:clamp(15.5px,1.8vw,18px);color:#d9dde4}
+  .hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;padding:15px 30px;border-radius:4px;transition:transform .15s,background .2s}
   .btn:hover{transform:translateY(-2px)}
-  .btn-primary{background:var(--accent);color:#fff}
-  .btn-primary:hover{background:var(--accent-d)}
-  .btn-ghost{border:1.5px solid var(--line);color:#fff}
-  .btn-ghost:hover{background:rgba(255,255,255,.07)}
-  .hero-strip{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line);font-size:14px;font-weight:600;color:#aeb6c3}
-  .hero-strip span{display:inline-flex;align-items:center;gap:9px}
-  .hero-strip svg{color:var(--accent)}
+  .btn-solid{background:var(--accent);color:#fff}
+  .btn-solid:hover{background:var(--accent-2)}
+  .btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+  .btn-line:hover{background:rgba(255,255,255,.12)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.25);font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#c6ccd6}
 
   /* ---------- sections ---------- */
-  section{padding:96px 0}
-  .sec-head{margin-bottom:52px;max-width:640px}
-  .sec-kicker{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-  .sec-head h2{font-size:clamp(30px,4vw,44px);line-height:1.12;font-weight:800;letter-spacing:-.015em}
-  .sec-head p{color:#5b6472;margin-top:14px;font-size:16.5px}
-  .sec-center{margin-left:auto;margin-right:auto;text-align:center}
+  section{padding:100px 0}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+  .sec-h{font-size:clamp(30px,4.2vw,50px);line-height:1.12;max-width:22ch}
+  .sec-h em{font-style:italic;color:var(--accent)}
+  .sec-sub{color:#5d6570;margin-top:16px;max-width:56ch;font-size:16px}
 
-  /* services */
-  .services{background:var(--paper2)}
-  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-  .svc-card{background:var(--paper);border:1px solid var(--line-d);border-radius:var(--radius);padding:36px 34px;transition:transform .2s,box-shadow .2s}
-  .svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(16,19,26,.35)}
-  .svc-num{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
-  .svc-card h3{font-size:24px;font-weight:800;margin:12px 0 6px;letter-spacing:-.01em}
-  .svc-card p.desc{color:#5b6472;font-size:15px;margin-bottom:20px}
-  .svc-list{list-style:none;display:grid;gap:11px}
-  .svc-list li{display:flex;align-items:baseline;gap:10px;font-size:15.5px;font-weight:600}
-  .svc-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;transform:translateY(-2px)}
+  /* what we transform — image cards */
+  .tx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+  .tx-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#ddd6c8;cursor:pointer}
+  .tx-card img{transition:transform .6s ease;position:absolute;inset:0}
+  .tx-card:hover img{transform:scale(1.07)}
+  .tx-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(21,24,29,.82) 100%)}
+  .tx-card .label{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff}
+  .tx-card .label b{display:block;font-family:"Playfair Display",serif;font-size:21px;font-weight:600}
+  .tx-card .label span{font-size:12.5px;color:#cfd4dc;letter-spacing:.04em}
+  @media(max-width:980px){.tx-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.tx-grid{grid-template-columns:1fr 1fr}.tx-card .label b{font-size:17px}}
 
-  /* process */
-  .process{background:var(--ink);color:#fff}
-  .process .sec-head p{color:#aeb6c3}
-  .step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-  .step{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:rgba(255,255,255,.03)}
-  .step .n{font-size:15px;font-weight:800;color:var(--accent);letter-spacing:.1em}
-  .step h3{font-size:19px;font-weight:700;margin:12px 0 8px}
-  .step p{font-size:14.5px;color:#aeb6c3}
+  /* design band — editorial numbered list */
+  .design{background:var(--white)}
+  .design-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border-top:1px solid var(--line-d)}
+  .d-item{padding:34px 26px 30px 0;border-bottom:1px solid var(--line-d)}
+  .d-item .n{font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:var(--accent)}
+  .d-item h3{font-size:22px;margin:12px 0 8px}
+  .d-item p{font-size:14.5px;color:#5d6570}
+  @media(max-width:980px){.design-row{grid-template-columns:repeat(2,1fr);gap:0 30px}}
+  @media(max-width:560px){.design-row{grid-template-columns:1fr}}
 
-  /* why strip */
-  .why{background:var(--paper)}
-  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-  .why-item{border:1px solid var(--line-d);border-radius:var(--radius);padding:28px;background:#fff}
-  .why-item h3{font-size:18px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:10px}
-  .why-item p{font-size:14.5px;color:#5b6472}
+  /* materials — horizontal scroll strip */
+  .materials{background:var(--ink);color:#fff;overflow:hidden}
+  .materials .kicker{color:#e8c9ae}
+  .mat-track{display:flex;gap:18px;margin-top:52px;overflow-x:auto;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--accent) rgba(255,255,255,.12)}
+  .mat-track::-webkit-scrollbar{height:5px}
+  .mat-track::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+  .mat-card{flex:0 0 300px;border-radius:14px;overflow:hidden;background:var(--ink-2)}
+  .mat-card .ph{aspect-ratio:4/3;position:relative;background:#2a2f39}
+  .mat-card .ph img{position:absolute;inset:0}
+  .mat-card .cap{padding:16px 18px;font-weight:600;font-size:15.5px;display:flex;justify-content:space-between;align-items:center}
+  .mat-card .cap span:last-child{color:var(--accent);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 
-  /* contact */
-  .contact{background:linear-gradient(180deg,var(--ink2),var(--ink));color:#fff}
-  .contact-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;border:1px solid var(--line);border-radius:24px;padding:44px 44px;background:rgba(255,255,255,.03)}
-  .contact h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-.015em;max-width:20ch}
-  .contact p.sub{color:#aeb6c3;margin-top:12px;max-width:46ch}
-  .contact-ways{display:flex;flex-direction:column;gap:16px;min-width:260px}
-  .cway{display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700}
-  .cway svg{color:var(--accent);flex:none}
-  .cway small{display:block;font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  /* process — horizontal timeline */
+  .process{background:var(--paper)}
+  .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
+  .tl::before{content:"";position:absolute;top:9px;left:0;right:0;height:1.5px;background:var(--line-d)}
+  .tl-step{position:relative;padding-top:40px}
+  .tl-step::before{content:"";position:absolute;top:2px;left:0;width:17px;height:17px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px var(--paper)}
+  .tl-step .n{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  .tl-step h3{font-size:20px;margin:10px 0 8px}
+  .tl-step p{font-size:14.5px;color:#5d6570;padding-right:22px}
+  @media(max-width:860px){.tl{grid-template-columns:1fr 1fr;gap:34px 0}.tl::before{display:none}.tl-step::before{display:none}.tl-step{padding-top:0}}
 
-  footer{background:var(--ink);color:#8b93a2;border-top:1px solid var(--line);padding:34px 0}
-  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:14px}
-  .foot .brand{color:#fff;font-size:15px}
+  /* CTA band */
+  .cta{position:relative;padding:0;color:#fff;background:var(--ink)}
+  .cta-inner{position:relative;border-radius:22px;overflow:hidden;margin:100px 26px;min-height:420px;display:flex;align-items:center}
+  .cta-inner img{position:absolute;inset:0}
+  .cta-inner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,24,29,.9) 0%,rgba(21,24,29,.55) 60%,rgba(21,24,29,.2) 100%)}
+  .cta-box{position:relative;z-index:2;padding:60px 56px;max-width:520px}
+  .cta-box h2{font-size:clamp(28px,3.6vw,42px);line-height:1.15}
+  .cta-box p{color:#d3d8e0;margin:16px 0 30px;font-size:16px}
+  .cta-phone{display:flex;align-items:center;gap:16px;margin-top:6px}
+  .cta-phone .num{font-family:"Playfair Display",serif;font-size:30px;font-weight:600;color:#fff}
+  .cta-phone .lbl{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#e8c9ae}
 
-  @media(max-width:640px){
-    section{padding:72px 0}
-    .hero{padding:80px 0 72px}
-    .contact-card{padding:32px 26px}
-  }
+  footer{background:var(--ink);color:#8d95a3;padding:34px 0;border-top:1px solid var(--line)}
+  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:13.5px}
+  .foot .brand{color:#fff}
+  @media(max-width:640px){section{padding:72px 0}.cta-inner{margin:64px 0;border-radius:0}}
 </style>
 </head>
 <body>
@@ -124,146 +139,136 @@
   <div class="wrap nav-in">
     <a class="brand" href="#top">
       <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="10" fill="#E07B39"/>
+        <rect width="40" height="40" rx="9" fill="#D97A3E"/>
         <path d="M10 29V11h4.6l5.4 9.4L25.4 11H30v18h-4.6v-9.2l-5.4 9.4-5.4-9.4V29H10z" fill="#fff"/>
       </svg>
-      REFORM PERTH
+      Reform Perth
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
+      <a href="#transform">Renovations</a>
+      <a href="#design">Design</a>
+      <a href="#materials">Materials</a>
       <a href="#process">Process</a>
-      <a href="#why">Why Us</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="nav-tel" href="tel:+61860104211">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      08 6010 4211
-    </a>
-    <button class="burger" id="burger" aria-label="Menu">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
+    <div class="nav-right">
+      <a class="nav-tel" href="tel:+61860104211">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        08 6010 4211
+      </a>
+      <a class="btn-q" href="#contact">Get a quote</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
+  <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2000&q=80" alt="Modern renovated kitchen">
   <div class="wrap">
-    <span class="eyebrow">Perth · Renovation, Design &amp; Materials</span>
-    <h1>Reform your space.<br><em>We handle the rest.</em></h1>
-    <p class="sub">From kitchen, bathroom and full-house renovations to commercial fit-outs — supported by in-house interior design, drafting and premium materials. One team, one standard, from first sketch to final handover.</p>
+    <span class="tag">Renovation studio · Perth WA</span>
+    <h1>We reform spaces into <em>places you love.</em></h1>
+    <p>Kitchens, bathrooms, whole homes and commercial fit-outs — designed in-house, built by our own team, finished with materials we supply and stand behind.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="tel:+61860104211">Get a free quote</a>
-      <a class="btn btn-ghost" href="#services">Explore services</a>
+      <a class="btn btn-solid" href="tel:+61860104211">Free consultation</a>
+      <a class="btn btn-line" href="#transform">See what we do</a>
     </div>
-    <div class="hero-strip">
-      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Renovations</span>
-      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Interior Design</span>
-      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Materials &amp; Supply</span>
+    <div class="hero-meta">
+      <span>Design · Build · Supply</span>
+      <span>Residential &amp; Commercial</span>
+      <span>08 6010 4211</span>
     </div>
   </div>
 </header>
 
-<section class="services" id="services">
+<section id="transform">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-kicker">What we do</div>
-      <h2>Three disciplines. One accountable team.</h2>
-      <p>Design it, build it, and supply it — without juggling separate contractors. REFORM PERTH covers the full scope of your project.</p>
+    <div class="kicker">Renovations</div>
+    <h2 class="sec-h reveal">What we transform</h2>
+    <p class="sec-sub reveal">Every project starts with the same question: what will this space feel like to live and work in? We rebuild it from there — structure, services, finishes and all.</p>
+    <div class="tx-grid">
+      <a class="tx-card reveal" href="#contact">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="Kitchen renovation" loading="lazy">
+        <div class="label"><b>Kitchens</b><span>Design · Cabinets · Stone</span></div>
+      </a>
+      <a class="tx-card reveal" href="#contact">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Bathroom renovation" loading="lazy">
+        <div class="label"><b>Bathrooms</b><span>Tile · Fixtures · Vanities</span></div>
+      </a>
+      <a class="tx-card reveal" href="#contact">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Whole home renovation" loading="lazy">
+        <div class="label"><b>Whole homes</b><span>Extensions · Refurbs</span></div>
+      </a>
+      <a class="tx-card reveal" href="#contact">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Commercial fit-out" loading="lazy">
+        <div class="label"><b>Commercial</b><span>Fit-out · Interiors</span></div>
+      </a>
     </div>
-    <div class="svc-grid">
+  </div>
+</section>
 
-      <div class="svc-card">
-        <div class="svc-num">01 — Renovations</div>
-        <h3>Build &amp; Renovate</h3>
-        <p class="desc">Transforming tired spaces into functional, beautiful ones — residential and commercial.</p>
-        <ul class="svc-list">
-          <li>Kitchen renovation</li>
-          <li>Bathroom renovation</li>
-          <li>House renovation</li>
-          <li>Commercial fit-out</li>
-        </ul>
-      </div>
+<section class="design" id="design">
+  <div class="wrap">
+    <div class="kicker">Design</div>
+    <h2 class="sec-h reveal">See it before we <em>build it</em></h2>
+    <p class="sec-sub reveal">Our in-house design team plans every detail up front — so what you approve is exactly what we deliver.</p>
+    <div class="design-row">
+      <div class="d-item reveal"><div class="n">01</div><h3>Interior Design</h3><p>Material, colour and lighting palettes that make a space feel considered, not decorated.</p></div>
+      <div class="d-item reveal"><div class="n">02</div><h3>Drafting</h3><p>Council-ready drawings and construction documentation, done properly the first time.</p></div>
+      <div class="d-item reveal"><div class="n">03</div><h3>Space Planning</h3><p>Layouts that work harder — flow, storage and proportion resolved before a single wall moves.</p></div>
+      <div class="d-item reveal"><div class="n">04</div><h3>3D Rendering</h3><p>Photoreal previews of your finished space, so there are no surprises on handover day.</p></div>
+    </div>
+  </div>
+</section>
 
-      <div class="svc-card">
-        <div class="svc-num">02 — Design</div>
-        <h3>Design &amp; Visualise</h3>
-        <p class="desc">See it before we build it — precise plans and realistic 3D renders, approved up front.</p>
-        <ul class="svc-list">
-          <li>Interior Design</li>
-          <li>Drafting</li>
-          <li>Space Planning</li>
-          <li>3D Rendering</li>
-        </ul>
-      </div>
-
-      <div class="svc-card">
-        <div class="svc-num">03 — Materials</div>
-        <h3>Materials &amp; Finishes</h3>
-        <p class="desc">Quality products sourced, supplied and installed — the finishes that make a space.</p>
-        <ul class="svc-list">
-          <li>Cabinets</li>
-          <li>Stone benchtops</li>
-          <li>Flooring</li>
-          <li>Tiles</li>
-          <li>Windows</li>
-        </ul>
-      </div>
-
+<section class="materials" id="materials">
+  <div class="wrap">
+    <div class="kicker">Materials</div>
+    <h2 class="sec-h reveal">Quality you can <em>touch</em></h2>
+    <p class="sec-sub reveal" style="color:#c6ccd6">We supply and install the finishes that define a space — sourced direct, specified to last.</p>
+    <div class="mat-track">
+      <div class="mat-card"><div class="ph"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80" alt="Cabinets" loading="lazy"></div><div class="cap"><span>Cabinets</span><span>Joinery</span></div></div>
+      <div class="mat-card"><div class="ph"><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80" alt="Stone benchtops" loading="lazy"></div><div class="cap"><span>Stone benchtops</span><span>Natural stone</span></div></div>
+      <div class="mat-card"><div class="ph"><img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Flooring" loading="lazy"></div><div class="cap"><span>Flooring</span><span>Timber · Laminate</span></div></div>
+      <div class="mat-card"><div class="ph"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=800&q=80" alt="Tiles" loading="lazy"></div><div class="cap"><span>Tiles</span><span>Porcelain · Ceramic</span></div></div>
+      <div class="mat-card"><div class="ph"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Windows" loading="lazy"></div><div class="cap"><span>Windows</span><span>Aluminium · uPVC</span></div></div>
     </div>
   </div>
 </section>
 
 <section class="process" id="process">
   <div class="wrap">
-    <div class="sec-head sec-center">
-      <div class="sec-kicker">How we work</div>
-      <h2>A clear path from idea to finished space</h2>
-      <p>No surprises, no guesswork — a structured process that keeps you informed at every stage.</p>
-    </div>
-    <div class="step-grid">
-      <div class="step"><div class="n">01 / Consult</div><h3>We listen</h3><p>We discuss your goals, site and budget, then scope the project honestly.</p></div>
-      <div class="step"><div class="n">02 / Design</div><h3>You approve</h3><p>Plans, space planning and 3D renders let you see the result before work starts.</p></div>
-      <div class="step"><div class="n">03 / Build</div><h3>We deliver</h3><p>Skilled trades, quality materials and clean, on-schedule execution.</p></div>
-      <div class="step"><div class="n">04 / Handover</div><h3>You enjoy</h3><p>Finishing touches, final walkthrough and a space you'll love living in.</p></div>
+    <div class="kicker">Process</div>
+    <h2 class="sec-h reveal">From first call to <em>final walkthrough</em></h2>
+    <div class="tl">
+      <div class="tl-step reveal"><div class="n">01 — Consult</div><h3>We listen</h3><p>Goals, site and budget — we scope the project honestly and tell you what's worth spending on.</p></div>
+      <div class="tl-step reveal"><div class="n">02 — Design</div><h3>You approve</h3><p>Drawings and 3D renders of your finished space before any work begins.</p></div>
+      <div class="tl-step reveal"><div class="n">03 — Build</div><h3>We deliver</h3><p>Our own trades, premium materials and a site manager who answers your calls.</p></div>
+      <div class="tl-step reveal"><div class="n">04 — Handover</div><h3>You enjoy</h3><p>A final walkthrough, finishing touches and a space you'll be proud of.</p></div>
     </div>
   </div>
 </section>
 
-<section class="why" id="why">
+<div class="cta" id="contact">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-kicker">Why REFORM PERTH</div>
-      <h2>One team from first sketch to final handover</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item"><h3>🏠 End-to-end scope</h3><p>Design, renovation and materials under one roof — no coordination headaches.</p></div>
-      <div class="why-item"><h3>📐 Design first</h3><p>3D renders and drafting before demolition, so what you see is what you get.</p></div>
-      <div class="why-item"><h3>🛠 Quality materials</h3><p>Cabinetry, stone benchtops, flooring, tiles and windows supplied to spec.</p></div>
-      <div class="why-item"><h3>🤝 Local &amp; accountable</h3><p>A Perth-based team with a single point of contact for your whole project.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="contact-card">
-      <div>
-        <div class="sec-kicker">Get in touch</div>
-        <h2>Planning a renovation or fit-out?</h2>
-        <p class="sub">Call us for a free, no-obligation chat about your project — or email us and we'll get back to you.</p>
-      </div>
-      <div class="contact-ways">
-        <a class="cway" href="tel:+61860104211">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span><small>Phone</small>08 6010 4211</span>
-        </a>
-        <a class="cway" href="mailto:info@reformperth.com">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
-          <span><small>Email</small>info@reformperth.com</span>
-        </a>
+    <div class="cta-inner">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80" alt="Modern renovated living space">
+      <div class="cta-box">
+        <div class="kicker">Start your project</div>
+        <h2>Planning a renovation or fit-out in Perth?</h2>
+        <p>Call for a free, no-obligation consultation. We'll talk through what's possible, what it costs, and what it takes.</p>
+        <a class="btn btn-solid" href="tel:+61860104211">Call 08 6010 4211</a>
+        <div class="cta-phone" style="margin-top:22px">
+          <div>
+            <div class="lbl">Email</div>
+            <a class="num" style="font-size:20px" href="mailto:info@reformperth.com">info@reformperth.com</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="wrap foot">
@@ -274,9 +279,12 @@
 </footer>
 
 <script>
-  var b = document.getElementById("burger"), n = document.getElementById("navLinks");
-  b.addEventListener("click", function(){ n.classList.toggle("open"); });
-  n.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ n.classList.remove("open"); }); });
+  var b=document.getElementById("burger"),n=document.getElementById("navLinks");
+  b.addEventListener("click",function(){n.classList.toggle("open")});
+  n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open")})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  document.querySelectorAll("img").forEach(function(im){im.addEventListener("error",function(){this.style.display="none"})});
 </script>
 </body>
 </html>
