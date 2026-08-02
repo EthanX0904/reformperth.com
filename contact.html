@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — REFORM PERTH</title>
+<meta name="description" content="Contact REFORM PERTH for a free consultation — renovations, design and materials in Perth.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#f3efe6; --bone-2:#ece6d9; --ink:#1b1f24; --ink-2:#232830;
+    --rust:#c96f3a; --deep:#26332c; --line:rgba(27,31,36,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Archivo",-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bone);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 30px}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(243,239,230,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+  .h-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo{display:flex;align-items:center;gap:11px;font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+  .logo .mark{width:36px;height:36px;flex:none}
+  .h-links{display:flex;gap:30px;font-size:13.5px;font-weight:500;letter-spacing:.04em}
+  .h-links a{opacity:.75;transition:opacity .2s}
+  .h-links a:hover{opacity:1}
+  .h-links a.on{opacity:1;color:var(--rust)}
+  .h-right{display:flex;align-items:center;gap:26px}
+  .h-tel{font-size:14px;font-weight:600}
+  .h-tel span{color:var(--rust)}
+  .h-cta{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-bottom:1.5px solid var(--rust);padding-bottom:3px;transition:color .2s}
+  .h-cta:hover{color:var(--rust)}
+  .burger{display:none;background:none;border:0;cursor:pointer}
+  @media(max-width:900px){
+    .h-links{display:none;position:absolute;top:78px;left:0;right:0;background:var(--bone);flex-direction:column;padding:20px 30px 28px;gap:18px;border-bottom:1px solid var(--line)}
+    .h-links.open{display:flex}
+    .burger{display:block}
+    .h-tel{display:none}
+  }
+
+  main{padding:190px 0 120px;min-height:80vh}
+  .kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--rust);margin-bottom:26px}
+  .kicker::before{content:"";width:34px;height:1.5px;background:var(--rust)}
+  h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(48px,6.4vw,88px);line-height:1;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--rust)}
+  .lede{margin-top:24px;max-width:46ch;font-size:17px;color:#4c545e}
+  .contact-box{margin-top:56px;border-top:1px solid var(--line);max-width:640px}
+  .c-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:30px 4px;border-bottom:1px solid var(--line)}
+  .c-row .lbl{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#6a7280;flex:none}
+  .c-row .val{font-family:"Instrument Serif",serif;font-size:clamp(24px,3.4vw,38px);transition:color .2s}
+  .c-row:hover .val{color:var(--rust)}
+  .note{margin-top:34px;font-size:14px;color:#6a7280}
+  .note a{border-bottom:1px solid var(--line)}
+  .back{display:inline-flex;align-items:center;gap:8px;margin-top:46px;font-size:14px;font-weight:600;border-bottom:1.5px solid var(--ink);padding-bottom:3px}
+  .back:hover{color:var(--rust);border-color:var(--rust)}
+
+  footer{background:var(--ink);color:#8b93a0;padding:44px 0 40px}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:13px}
+  .foot .word{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bone)}
+  @media(max-width:640px){main{padding:160px 0 90px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap h-in">
+    <a class="logo" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="10" fill="#C96F3A"/>
+        <g fill="#F3EFE6">
+          <rect x="12" y="10" width="4.5" height="20"/>
+          <rect x="16.5" y="10" width="10" height="4.5"/>
+          <rect x="22" y="14.5" width="4.5" height="6.5"/>
+          <path d="M18 24.5 L26 30 h-4.2 L14.6 24.5 z"/>
+        </g>
+      </svg>
+      Reform Perth
+    </a>
+    <div class="h-links" id="hLinks">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#design">Design</a>
+      <a href="index.html#materials">Materials</a>
+      <a href="index.html#process">Process</a>
+      <a class="on" href="contact.html">Contact</a>
+    </div>
+    <div class="h-right">
+      <a class="h-tel" href="tel:+61860104211"><span>08</span> 6010 4211</a>
+      <a class="h-cta" href="contact.html">Free quote</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <span class="kicker">Contact</span>
+    <h1>Let's talk about <em>your space</em></h1>
+    <p class="lede">Free, no-obligation consultation — tell us what you're planning and we'll tell you what it takes.</p>
+    <div class="contact-box">
+      <a class="c-row" href="tel:+61860104211">
+        <span class="lbl">Phone</span>
+        <span class="val">08 6010 4211</span>
+      </a>
+      <a class="c-row" href="mailto:info@reformperth.com">
+        <span class="lbl">Email</span>
+        <span class="val">info@reformperth.com</span>
+      </a>
+    </div>
+    <p class="note">Mon–Fri · Perth, Western Australia</p>
+    <a class="back" href="index.html">← Back to home</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="word">
+      <svg style="width:26px;height:26px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="10" fill="#C96F3A"/>
+        <g fill="#F3EFE6">
+          <rect x="12" y="10" width="4.5" height="20"/>
+          <rect x="16.5" y="10" width="10" height="4.5"/>
+          <rect x="22" y="14.5" width="4.5" height="6.5"/>
+          <path d="M18 24.5 L26 30 h-4.2 L14.6 24.5 z"/>
+        </g>
+      </svg>
+      Reform Perth
+    </span>
+    <span>© 2026 REFORM PERTH PTY LTD. All rights reserved.</span>
+    <span>08 6010 4211 · info@reformperth.com</span>
+  </div>
+</footer>
+
+<script>
+  var b=document.getElementById("burger"),n=document.getElementById("hLinks");
+  b.addEventListener("click",function(){n.classList.toggle("open")});
+  n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open")})});
+</script>
+</body>
+</html>
